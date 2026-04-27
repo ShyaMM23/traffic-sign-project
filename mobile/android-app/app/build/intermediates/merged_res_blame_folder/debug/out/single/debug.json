@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "C:\\Users\\Deepak Shyam\\.gradle\\daemon\\8.4\\com.trafficai.app-merged_res-49:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\Deepak Shyam\\.gradle\\daemon\\8.4\\com.trafficai.app-main-51:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Deepak Shyam\\.gradle\\daemon\\8.4\\com.trafficai.app-merged_res-49:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\Deepak Shyam\\.gradle\\daemon\\8.4\\com.trafficai.app-main-51:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Deepak Shyam\\.gradle\\daemon\\8.4\\com.trafficai.app-merged_res-49:\\layout_fragment_about.xml.flat",
+        "source": "C:\\Users\\Deepak Shyam\\.gradle\\daemon\\8.4\\com.trafficai.app-main-51:\\layout\\fragment_about.xml"
+    },
+    {
+        "merged": "C:\\Users\\Deepak Shyam\\.gradle\\daemon\\8.4\\com.trafficai.app-merged_res-49:\\layout_fragment_detect.xml.flat",
+        "source": "C:\\Users\\Deepak Shyam\\.gradle\\daemon\\8.4\\com.trafficai.app-main-51:\\layout\\fragment_detect.xml"
+    },
+    {
+        "merged": "C:\\Users\\Deepak Shyam\\.gradle\\daemon\\8.4\\com.trafficai.app-merged_res-49:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\Deepak Shyam\\.gradle\\daemon\\8.4\\com.trafficai.app-main-51:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Deepak Shyam\\.gradle\\daemon\\8.4\\com.trafficai.app-merged_res-49:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Deepak Shyam\\.gradle\\daemon\\8.4\\com.trafficai.app-main-51:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Deepak Shyam\\.gradle\\daemon\\8.4\\com.trafficai.app-merged_res-49:\\color_bottom_nav_color.xml.flat",
+        "source": "C:\\Users\\Deepak Shyam\\.gradle\\daemon\\8.4\\com.trafficai.app-main-51:\\color\\bottom_nav_color.xml"
+    },
+    {
+        "merged": "com.trafficai.app-merged_res-49:/layout_fragment_detect.xml.flat",
+        "source": "com.trafficai.app-main-51:/layout/fragment_detect.xml"
+    },
+    {
+        "merged": "C:\\Users\\Deepak Shyam\\.gradle\\daemon\\8.4\\com.trafficai.app-merged_res-49:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\Deepak Shyam\\.gradle\\daemon\\8.4\\com.trafficai.app-main-51:\\navigation\\nav_graph.xml"
+    }
+]

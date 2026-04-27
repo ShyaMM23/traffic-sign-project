@@ -1,0 +1,52 @@
+com.trafficai.app-navigation-common-ktx-2.7.6-0 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\035576fbd3e15091811083402697dc72\transformed\navigation-common-ktx-2.7.6\res
+com.trafficai.app-navigation-ui-ktx-2.7.6-1 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\076608f50de66ecf847f22a87656cffe\transformed\navigation-ui-ktx-2.7.6\res
+com.trafficai.app-jetified-activity-ktx-1.8.0-2 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\0d105f16020dde76160f2d0065599df6\transformed\jetified-activity-ktx-1.8.0\res
+com.trafficai.app-navigation-common-2.7.6-3 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\123a244adcb7c12b867f16aafce4f3c8\transformed\navigation-common-2.7.6\res
+com.trafficai.app-navigation-runtime-ktx-2.7.6-4 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\262e35473031eda64b1b2de87b36b277\transformed\navigation-runtime-ktx-2.7.6\res
+com.trafficai.app-core-1.12.0-5 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\27ad49e110844709146a48c38c841427\transformed\core-1.12.0\res
+com.trafficai.app-jetified-lifecycle-livedata-core-ktx-2.7.0-6 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\2828fd9be46f2ed909359b563652d8eb\transformed\jetified-lifecycle-livedata-core-ktx-2.7.0\res
+com.trafficai.app-lifecycle-viewmodel-2.7.0-7 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\2a5e00e678a726144ccb49b3e3a557d5\transformed\lifecycle-viewmodel-2.7.0\res
+com.trafficai.app-jetified-lifecycle-viewmodel-ktx-2.7.0-8 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\34fd3667369baf030d78d7b5ee6c8786\transformed\jetified-lifecycle-viewmodel-ktx-2.7.0\res
+com.trafficai.app-constraintlayout-2.1.4-9 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\3db3f56abc043e3ec00dd5f4f776e2ff\transformed\constraintlayout-2.1.4\res
+com.trafficai.app-recyclerview-1.1.0-10 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\4139d1eef5b98f72f2b370d120aaae92\transformed\recyclerview-1.1.0\res
+com.trafficai.app-jetified-lifecycle-livedata-ktx-2.7.0-11 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\45eda953f09ff00ee05c268bde812181\transformed\jetified-lifecycle-livedata-ktx-2.7.0\res
+com.trafficai.app-jetified-viewpager2-1.0.0-12 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\47936597c6e3b1bc2f2d6f1315330d25\transformed\jetified-viewpager2-1.0.0\res
+com.trafficai.app-jetified-lifecycle-process-2.7.0-13 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\49e71170bc4e3fdd6c459920a8cc9329\transformed\jetified-lifecycle-process-2.7.0\res
+com.trafficai.app-jetified-lifecycle-viewmodel-savedstate-2.7.0-14 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\4ab00ec08106578c744c1eb4231e5a8f\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\res
+com.trafficai.app-jetified-fragment-ktx-1.6.2-15 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\50cee65ee8092c7fc466570fb4585bdb\transformed\jetified-fragment-ktx-1.6.2\res
+com.trafficai.app-jetified-savedstate-1.2.1-16 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\563250d2ba679ad9eab47bd4dcc801f1\transformed\jetified-savedstate-1.2.1\res
+com.trafficai.app-lifecycle-runtime-2.7.0-17 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\5f79fbfea4ff95341fcd9ceb861f00d3\transformed\lifecycle-runtime-2.7.0\res
+com.trafficai.app-lifecycle-livedata-2.7.0-18 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\60a3379b5dcdf4372bb9b156a8aa5c36\transformed\lifecycle-livedata-2.7.0\res
+com.trafficai.app-cardview-1.0.0-19 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\68b4a385a54f29e238d24128a915c1ab\transformed\cardview-1.0.0\res
+com.trafficai.app-transition-1.4.1-20 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\6d6bb707ef79960f1ec209928656bc8e\transformed\transition-1.4.1\res
+com.trafficai.app-navigation-fragment-ktx-2.7.6-21 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\7862c611649f0b7c697ce498cd1ec6c9\transformed\navigation-fragment-ktx-2.7.6\res
+com.trafficai.app-jetified-profileinstaller-1.3.1-22 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\7fb98a3b13f5e8ea53f03e137d1e7764\transformed\jetified-profileinstaller-1.3.1\res
+com.trafficai.app-slidingpanelayout-1.2.0-23 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\815c02bcd9ba2dd2a593a345eac98512\transformed\slidingpanelayout-1.2.0\res
+com.trafficai.app-jetified-activity-1.8.0-24 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\81b6fbb9e4d2ee38e0aa7b11592e3aac\transformed\jetified-activity-1.8.0\res
+com.trafficai.app-jetified-savedstate-ktx-1.2.1-25 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\87a8f458f5c1c09a2f64136d5e7bb21e\transformed\jetified-savedstate-ktx-1.2.1\res
+com.trafficai.app-coordinatorlayout-1.1.0-26 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\899f08b2e2712ebdf0befd90fb43c193\transformed\coordinatorlayout-1.1.0\res
+com.trafficai.app-jetified-appcompat-resources-1.6.1-27 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\89cf1c59020c6007aed440e6ce9ce631\transformed\jetified-appcompat-resources-1.6.1\res
+com.trafficai.app-jetified-emoji2-views-helper-1.2.0-28 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\8b7fb28fe5f83caf1761b2a0d9dea08d\transformed\jetified-emoji2-views-helper-1.2.0\res
+com.trafficai.app-core-runtime-2.2.0-29 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\8fbfef4fa9ec4e4858aff8645eb38424\transformed\core-runtime-2.2.0\res
+com.trafficai.app-jetified-annotation-experimental-1.3.0-30 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\941fdf0958207e431b9bbbadbd82ea5e\transformed\jetified-annotation-experimental-1.3.0\res
+com.trafficai.app-jetified-lifecycle-runtime-ktx-2.7.0-31 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\a0bb7118e3ed0eb755f53c1aaaf25ad5\transformed\jetified-lifecycle-runtime-ktx-2.7.0\res
+com.trafficai.app-jetified-window-1.0.0-32 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\a4579886e908cbfdd9713947724ab1d9\transformed\jetified-window-1.0.0\res
+com.trafficai.app-navigation-ui-2.7.6-33 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\aa38c0e608004df3a37932da5703b3b9\transformed\navigation-ui-2.7.6\res
+com.trafficai.app-jetified-core-ktx-1.12.0-34 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\b6fb6c17cc3276fbafb46ec0c62588c4\transformed\jetified-core-ktx-1.12.0\res
+com.trafficai.app-drawerlayout-1.1.1-35 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\c81dfae307e8ce2d99c7dc6255919abc\transformed\drawerlayout-1.1.1\res
+com.trafficai.app-lifecycle-livedata-core-2.7.0-36 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\cc0ce4c1dda4da604d35a74f4f2c3b28\transformed\lifecycle-livedata-core-2.7.0\res
+com.trafficai.app-jetified-startup-runtime-1.1.1-37 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\cf47cac6c017aa1cb9bdb4a2f4215b89\transformed\jetified-startup-runtime-1.1.1\res
+com.trafficai.app-navigation-runtime-2.7.6-38 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\cfe56ecc37846a907ace112d364b7129\transformed\navigation-runtime-2.7.6\res
+com.trafficai.app-navigation-fragment-2.7.6-39 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\db7f0800269a43dbf84e0c61447c160c\transformed\navigation-fragment-2.7.6\res
+com.trafficai.app-appcompat-1.6.1-40 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\df488939a99d1459f378ec81039fd8c7\transformed\appcompat-1.6.1\res
+com.trafficai.app-fragment-1.6.2-41 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\e357a246158b5d8f0d379623c3e26813\transformed\fragment-1.6.2\res
+com.trafficai.app-jetified-emoji2-1.2.0-42 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\fafd0ffd25f5d9295dcc8079b0181d35\transformed\jetified-emoji2-1.2.0\res
+com.trafficai.app-material-1.11.0-43 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\fba9ffcb9a1bfb1e502996e1bdc8bf8d\transformed\material-1.11.0\res
+com.trafficai.app-jetified-coil-base-2.5.0-44 C:\Users\Deepak Shyam\.gradle\caches\transforms-3\fd30880ef3a28ff0ef1b225db2b6b461\transformed\jetified-coil-base-2.5.0\res
+com.trafficai.app-pngs-45 D:\road-sign-project\mobile\android-app\app\build\generated\res\pngs\debug
+com.trafficai.app-resValues-46 D:\road-sign-project\mobile\android-app\app\build\generated\res\resValues\debug
+com.trafficai.app-packageDebugResources-47 D:\road-sign-project\mobile\android-app\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.trafficai.app-packageDebugResources-48 D:\road-sign-project\mobile\android-app\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.trafficai.app-merged_res-49 D:\road-sign-project\mobile\android-app\app\build\intermediates\merged_res\debug
+com.trafficai.app-debug-50 D:\road-sign-project\mobile\android-app\app\src\debug\res
+com.trafficai.app-main-51 D:\road-sign-project\mobile\android-app\app\src\main\res
