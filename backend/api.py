@@ -1,31 +1,31 @@
-# ==========================================================
-# FINAL PRODUCTION api.py
-# Manual Detection + EfficientNet + Transliteration
-# Flask Backend
-# ==========================================================
 
+import os
+import io
+import numpy as np
+import torch
+import gdown
+
+from PIL import Image
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import torch
-import numpy as np
-from PIL import Image
-import io
-import math
 
 from model.unified_model import UnifiedModel
 
-# ==========================================================
-# APP
-# ==========================================================
 app = Flask(__name__)
 CORS(app)
 
-# ==========================================================
-# DEVICE
-# ==========================================================
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 MODEL_PATH = "efficientnet_final.pth"
+FILE_ID = "1hcFUOMx5LJ1j_Qx_R_EMF_pPU_EsAArO"
+
+if not os.path.exists(MODEL_PATH):
+    print("Downloading model from Google Drive...")
+    gdown.download(
+        f"https://drive.google.com/uc?id={FILE_ID}",
+        MODEL_PATH,
+        quiet=False
+    )
 
 CLASS_NAMES = [
     "stop",
@@ -38,10 +38,6 @@ CLASS_NAMES = [
     "other_boards",
     "u_turn"
 ]
-
-# ==========================================================
-# TRANSLITERATION
-# ==========================================================
 TRANSLITERATION = {
     "stop": "நிறுத்து",
     "left_turn": "இடப்புறம் திரும்பவும்",
@@ -49,93 +45,75 @@ TRANSLITERATION = {
     "no_parking": "நிறுத்த தடை",
     "speed_limit": "வேக வரம்பு",
     "u_turn": "யு டர்ன்",
-    "general_board": "பொது பலகை",
+    "general_board": "பொது பலகை",
     "advertising_board": "விளம்பர பலகை",
     "other_boards": "மற்ற பலகை"
 }
 
-# ==========================================================
-# LOAD MODEL
-# ==========================================================
+print("Loading model...")
+
 model = UnifiedModel(
     backbone="efficientnet",
     num_classes=9,
     use_se=True
 )
 
-model.load_state_dict(
-    torch.load(MODEL_PATH, map_location=DEVICE)
-)
+state = torch.load(MODEL_PATH, map_location=DEVICE)
+model.load_state_dict(state)
 
 model.to(DEVICE)
 model.eval()
 
-print("🔥 Model Loaded")
+print("Model loaded successfully")
 
-# ==========================================================
-# MANUAL SOFTMAX
-# ==========================================================
 def softmax_manual(x):
-    exp = torch.exp(x - torch.max(x))
-    return exp / exp.sum()
+    x = x - torch.max(x)
+    exp = torch.exp(x)
+    return exp / torch.sum(exp)
 
-# ==========================================================
-# MANUAL RESIZE
-# ==========================================================
-def resize_manual(img, size=224):
+def preprocess(img):
     pil = Image.fromarray(img)
-    pil = pil.resize((size, size))
-    return np.array(pil)
+    pil = pil.resize((224, 224))
 
-# ==========================================================
-# TO TENSOR
-# ==========================================================
-def to_tensor(img):
-    img = img.astype(np.float32) / 255.0
+    arr = np.array(pil).astype(np.float32) / 255.0
 
     mean = np.array([0.485, 0.456, 0.406])
-    std  = np.array([0.229, 0.224, 0.225])
+    std = np.array([0.229, 0.224, 0.225])
 
-    img = (img - mean) / std
+    arr = (arr - mean) / std
 
-    img = np.transpose(img, (2, 0, 1))
+    arr = np.transpose(arr, (2, 0, 1))
 
-    tensor = torch.tensor(img).float().unsqueeze(0)
+    tensor = torch.tensor(arr).float().unsqueeze(0)
 
-    return tensor
+    return tensor.to(DEVICE)
 
-# ==========================================================
-# MANUAL RED BLUE REGION SEARCH
-# ==========================================================
 def get_candidates(img):
 
     h, w, _ = img.shape
-
     boxes = []
 
-    step = 40
+    step = 50
+    size = 140
 
-    for y in range(0, h - 60, step):
-        for x in range(0, w - 60, step):
+    for y in range(0, h - size, step):
+        for x in range(0, w - size, step):
 
-            crop = img[y:y+120, x:x+120]
-
-            if crop.shape[0] < 60 or crop.shape[1] < 60:
-                continue
+            crop = img[y:y+size, x:x+size]
 
             r = crop[:, :, 0].mean()
             g = crop[:, :, 1].mean()
             b = crop[:, :, 2].mean()
 
-            # detect red / blue dominant areas
-            if r > g + 25 or b > g + 25:
-                boxes.append((x, y, x+120, y+120))
+            # red / blue dominant regions
+            if r > g + 20 or b > g + 20:
+                boxes.append((x, y, x+size, y+size))
+
+    if len(boxes) == 0:
+        boxes.append((0, 0, w, h))
 
     return boxes
 
-# ==========================================================
-# DETECTION
-# ==========================================================
 def detect_image(img):
 
     h, w, _ = img.shape
@@ -147,13 +125,12 @@ def detect_image(img):
 
         pil = Image.fromarray(img)
         pil = pil.resize((700, nh))
-
         img = np.array(pil)
 
     boxes = get_candidates(img)
 
     best_label = "no_sign"
-    best_conf = 0
+    best_conf = 0.0
 
     for box in boxes:
 
@@ -164,9 +141,7 @@ def detect_image(img):
         if crop.size == 0:
             continue
 
-        crop = resize_manual(crop, 224)
-
-        inp = to_tensor(crop).to(DEVICE)
+        inp = preprocess(crop)
 
         with torch.no_grad():
 
@@ -179,17 +154,17 @@ def detect_image(img):
             conf = float(conf.item())
             cls = int(cls.item())
 
-        if conf > best_conf and conf > 0.60:
+        label = CLASS_NAMES[cls]
 
-            label = CLASS_NAMES[cls]
+        # ignore non-sign boards
+        if label in [
+            "general_board",
+            "advertising_board",
+            "other_boards"
+        ]:
+            continue
 
-            if label in [
-                "advertising_board",
-                "general_board",
-                "other_boards"
-            ]:
-                continue
-
+        if conf > best_conf and conf > 0.55:
             best_conf = conf
             best_label = label
 
@@ -197,12 +172,16 @@ def detect_image(img):
         "class": best_label,
         "confidence": round(best_conf, 4),
         "transliteration":
-        TRANSLITERATION.get(best_label, "")
+            TRANSLITERATION.get(best_label, "")
     }
 
-# ==========================================================
-# API ROUTE
-# ==========================================================
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({
+        "status": "running",
+        "message": "Traffic Sign AI API Live"
+    })
+
 @app.route("/predict", methods=["POST"])
 def predict():
 
@@ -211,7 +190,7 @@ def predict():
         if "file" not in request.files:
             return jsonify({
                 "error": "No file uploaded"
-            })
+            }), 400
 
         file = request.files["file"]
 
@@ -231,14 +210,11 @@ def predict():
 
         return jsonify({
             "error": str(e)
-        })
-
-# ==========================================================
-# RUN
-# ==========================================================
+        }), 500
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+
     app.run(
         host="0.0.0.0",
-        port=8000,
-        debug=True
+        port=port
     )
